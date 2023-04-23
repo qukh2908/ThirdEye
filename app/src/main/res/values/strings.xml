@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ThirdEye</string>
+    <string name="third_eye">Third Eye</string>
+    <string name="logo">Logo</string>
+    <string name="compass_img">Compass img</string>
+    <string name="mode">mode</string>
+</resources>

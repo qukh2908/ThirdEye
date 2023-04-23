@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/viewLayout"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/thirdeye_icon"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/thirdeyelogo"
+            android:contentDescription="@string/logo" />
+
+        <ImageView
+            android:id="@+id/compass_icon"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/compass_icon"
+            android:contentDescription="@string/compass_img" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTintMode="src_over"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewLayout">
+
+        <TextView
+            android:id="@+id/tv_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#252525"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:clickable="false"
+        android:max="200"
+        android:min="0"
+        android:progress="200"
+        android:progressBackgroundTint="#252525"
+        android:progressTint="#673AB7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/tv_mode"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="serif"
+        android:text="@string/mode"
+        android:textAlignment="center"
+        android:textColor="#303030"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="320dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn1"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#673AB7"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_baseline_vibration_24"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:importantForAccessibility="no" />
+
+        <ImageButton
+            android:id="@+id/btn2"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="#673AB7"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_baseline_transcribe_24"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:importantForAccessibility="no" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
